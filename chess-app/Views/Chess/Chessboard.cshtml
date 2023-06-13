@@ -1,0 +1,78 @@
+@{
+    string[] colors = { "#f0d9b5", "#b58863" }; // light and dark colors
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chessboard</title>
+    <style>
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+        }
+
+        .square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var sourcePosition = null;
+
+        function squareClicked(row, col) {
+            if (sourcePosition == null) {
+                sourcePosition = { row: row, col: col };
+            } else {
+                var targetPosition = { row: row, col: col };
+
+                $.ajax({
+                    url: '@Url.Action("MovePiece", "Chess")',
+                    data: {
+                        sourceRow: sourcePosition.row,
+                        sourceColumn: sourcePosition.col,
+                        targetRow: targetPosition.row,
+                        targetColumn: targetPosition.col
+                    },
+                    type: 'POST',
+                    success: function () {
+                        // refresh the page or just update the specific elements that have changed
+                        location.reload();
+                    },
+                    error: function () {
+                        alert("Invalid move!");
+                        sourcePosition = null;
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Chessboard</h1>
+    <div class="chessboard">
+        @for (int row = 0; row < 8; row++)
+        {
+            for (int col = 0; col < 8; col++)
+            {
+                string color = colors[(row + col) % 2];
+                <div class="square" style="background-color: @color;">
+                    @{
+                        var piece = Model[row, col];
+                        if (piece != null)
+                        {
+                            <span class="piece-symbol">@piece.Symbol</span>
+                        }
+                    }
+                </div>
+            }
+        }
+    </div>
+</body>
+
+</html>
