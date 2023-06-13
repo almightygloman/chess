@@ -1,7 +1,7 @@
 public class Pawn : Piece
 {
     public Pawn(string color, (int Row, int Column) position)
-        : base('♟', color, position)
+        : base(color == "White" ? "white_pawn.png" : "black_pawn.png", color, position)
     {
     }
 

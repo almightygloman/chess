@@ -1,9 +1,8 @@
 public class Bishop : Piece
 {
     public Bishop(string color, (int Row, int Column) position)
-        : base('♗', color, position)
-    {
-    }
+        : base(color == "White" ? "white_bishop.png" : "black_bishop.png", color, position)
+    { }
 
     public override bool CanMoveTo((int Row, int Column) newPosition)
     {
