@@ -17,7 +17,7 @@ function squareClicked(row, col) {
         var targetPosition = { row: row, col: col };
 
         $.ajax({
-            url: '@Url.Action("MovePiece", "Chess")', // Adjust this to the correct route
+            url: '/Chess/MovePiece', // Adjust this to the correct route
             data: {
                 sourceRow: sourcePosition.row,
                 sourceColumn: sourcePosition.col,
