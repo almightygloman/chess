@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tDPfdh1kuXK82wqSWQlkT3kXJGzYqW8qoa+e79r0s1M=",
+  "Hash": "7oNfy3WM0m0UIOIMXGeibYwo1MAgvDWV427YQ2ParRQ=",
   "Source": "chess-app",
   "BasePath": "_content/chess-app",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/white_rook.png"
+    },
+    {
+      "Identity": "/home/zachivanovs/repos/chess/chess-app/wwwroot/js/chess.js",
+      "SourceId": "chess-app",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/zachivanovs/repos/chess/chess-app/wwwroot/",
+      "BasePath": "_content/chess-app",
+      "RelativePath": "js/chess.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/chess.js"
     },
     {
       "Identity": "/home/zachivanovs/repos/chess/chess-app/wwwroot/js/site.js",

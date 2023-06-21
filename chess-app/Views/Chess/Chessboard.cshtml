@@ -19,38 +19,13 @@
             align-items: center;
             justify-content: center;
         }
+
+        .highlight {
+            border: 2px solid red;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        var sourcePosition = null;
-
-        function squareClicked(row, col) {
-            if (sourcePosition == null) {
-                sourcePosition = { row: row, col: col };
-            } else {
-                var targetPosition = { row: row, col: col };
-
-                $.ajax({
-                    url: '@Url.Action("MovePiece", "Chess")',
-                    data: {
-                        sourceRow: sourcePosition.row,
-                        sourceColumn: sourcePosition.col,
-                        targetRow: targetPosition.row,
-                        targetColumn: targetPosition.col
-                    },
-                    type: 'POST',
-                    success: function () {
-                        // refresh the page or just update the specific elements that have changed
-                        location.reload();
-                    },
-                    error: function () {
-                        alert("Invalid move!");
-                        sourcePosition = null;
-                    }
-                });
-            }
-        }
-    </script>
+    <script src="/js/chess.js"></script>
 </head>
 
 <body>
@@ -61,9 +36,10 @@
             for (int col = 0; col < 8; col++)
             {
                 string color = colors[(row + col) % 2];
-                <div class="square" style="background-color: @color;">
+                <div class="square" data-row="@row" data-col="@col" style="background-color: @color;"
+                    onclick="squareClicked(@row, @col)">
                     @{
-                        var piece = Model[row, col];
+                        var piece = Model[row][col];
                         if (piece != null)
                         {
                             <img src="~/img/@piece.ImagePath" alt="Piece Image" />
@@ -74,5 +50,9 @@
         }
     </div>
 </body>
+<div id="info">
+    <p id="selected-square"></p>
+    <p id="selected-piece"></p>
+</div>
 
 </html>

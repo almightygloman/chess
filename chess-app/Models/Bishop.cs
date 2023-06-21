@@ -1,10 +1,10 @@
 public class Bishop : Piece
 {
-    public Bishop(string color, (int Row, int Column) position)
-        : base(color == "White" ? "white_bishop.png" : "black_bishop.png", color, position)
+    public Bishop(PieceColor color, (int Row, int Column) position)
+        : base(color == PieceColor.White ? "white_bishop.png" : "black_bishop.png", color, position)
     { }
 
-    public override bool CanMoveTo((int Row, int Column) newPosition)
+    public override bool CanMoveTo((int Row, int Column) newPosition, Chessboard chessBoard)
     {
         // Check if the new position is within the bounds of the chessboard
         if (newPosition.Row < 0 || newPosition.Row >= 8 || newPosition.Column < 0 || newPosition.Column >= 8)
@@ -17,5 +17,9 @@ public class Bishop : Piece
         int colDifference = Math.Abs(newPosition.Column - Position.Column);
 
         return rowDifference == colDifference;
+    }
+    public override List<(int Row, int Column)> CalculateLegalMoves(Chessboard chessBoard)
+    {
+        throw new NotImplementedException();
     }
 }
