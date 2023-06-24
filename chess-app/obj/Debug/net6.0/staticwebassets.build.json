@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7oNfy3WM0m0UIOIMXGeibYwo1MAgvDWV427YQ2ParRQ=",
+  "Hash": "YkE0x4/bd3oGvtlLO33N/Fu0ercOHwmJ1HO83/8qI9E=",
   "Source": "chess-app",
   "BasePath": "_content/chess-app",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/zachivanovs/repos/chess/chess-app/obj/Debug/net6.0/scopedcss/projectbundle/chess-app.bundle.scp.css"
+    },
+    {
+      "Identity": "/home/zachivanovs/repos/chess/chess-app/wwwroot/chess_app.styles.css",
+      "SourceId": "chess-app",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/zachivanovs/repos/chess/chess-app/wwwroot/",
+      "BasePath": "_content/chess-app",
+      "RelativePath": "chess_app.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/chess_app.styles.css"
     },
     {
       "Identity": "/home/zachivanovs/repos/chess/chess-app/wwwroot/css/site.css",

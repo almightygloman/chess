@@ -1,5 +1,53 @@
 var sourcePosition = null;
 
+document.addEventListener('DOMContentLoaded', function () {
+    generateChessboard();
+    fetchInitialState();
+
+});
+
+function generateChessboard() {
+    var container = document.getElementById('chessboard-container');
+    var isLightSquare = true;
+
+    for (var row = 0; row < 8; row++) {
+        var rowDiv = document.createElement('div');
+        rowDiv.classList.add('row');
+
+        for (var col = 0; col < 8; col++) {
+            var square = document.createElement('div');
+            square.classList.add('square');
+            square.dataset.row = row;
+            square.dataset.col = col;
+            square.classList.add(isLightSquare ? 'light' : 'dark');
+            square.addEventListener('click', squareClicked.bind(null, row, col));
+            rowDiv.appendChild(square);
+            isLightSquare = !isLightSquare;
+        }
+
+        container.appendChild(rowDiv);
+        isLightSquare = !isLightSquare;
+    }
+}
+
+
+
+function fetchInitialState() {
+    $.ajax({
+        url: '/Chess/InitialBoardState', // Change the URL to the correct endpoint
+        type: 'GET',
+        success: function (response) {
+            console.log("Response from server:", response); // Log the response
+            updateBoard(response.boardState);
+        },
+        error: function () {
+            alert('Failed to fetch the initial state');
+        }
+    });
+}
+
+
+
 function squareClicked(row, col) {
     console.log(`Clicked square at row: ${row}, col: ${col}`);
     var square = document.querySelector(`.square[data-row='${row}'][data-col='${col}']`);
@@ -27,15 +75,10 @@ function squareClicked(row, col) {
             type: 'POST',
             success: function (response) {
                 if (response.success) {
-                    if (sourcePosition.row == targetPosition.row && sourcePosition.col == targetPosition.col) {
-                        // Display the legal moves for the piece
-                        displayLegalMoves(response.legalMoves);
-                    } else {
-                        // Update the board state after a move
-                        updateBoard(response.boardState);
-                    }
+                    // Update the board state after a move
+                    updateBoard(response.boardState);
                 } else {
-                    alert("Invalid move!");
+                    alert(response.responseText);
                 }
                 sourcePosition = null;
             },
@@ -48,39 +91,46 @@ function squareClicked(row, col) {
 }
 
 function updateBoard(boardState) {
+    console.log("Received boardState:", boardState);
+
+    if (!boardState || boardState.length !== 8) {
+        console.error("Invalid boardState received:", boardState);
+        return;
+    }
+
     for (var row = 0; row < 8; row++) {
         for (var col = 0; col < 8; col++) {
             var square = document.querySelector(`.square[data-row='${row}'][data-col='${col}']`);
+
+            if (!square) {
+                console.error(`Square element not found for row=${row}, col=${col}`);
+                continue;
+            }
+
             var piece = boardState[row][col];
             var img = square.querySelector('img');
+            
+            console.log(`Processing square at row=${row}, col=${col}, piece=`, piece);
 
-            if (piece) {
-                var imgSrc = '/img/' + piece.ImagePath; // Adjust this to the correct path
+            if (piece && piece.imagePath) {
+                var imgSrc = '/img/' + piece.imagePath; // Adjust this to the correct path
+                console.log(`Piece found at row=${row}, col=${col}. Setting image source to ${imgSrc}`);
+
                 if (img) {
                     img.src = imgSrc;
                 } else {
                     var newImg = document.createElement('img');
                     newImg.src = imgSrc;
                     square.appendChild(newImg);
+                    console.log(`New image element created for piece at row=${row}, col=${col}`);
                 }
             } else {
+                console.log(`No piece found at row=${row}, col=${col}`);
                 if (img) {
                     square.removeChild(img);
+                    console.log(`Removed image from square at row=${row}, col=${col}`);
                 }
             }
         }
     }
-}
-function displayLegalMoves(legalMoves) {
-    // Remove the highlight from any previously highlighted squares
-    var highlightedSquares = document.querySelectorAll('.highlight');
-    highlightedSquares.forEach(function (square) {
-        square.classList.remove('highlight');
-    });
-
-    // Add the highlight to the squares corresponding to the legal moves
-    legalMoves.forEach(function (move) {
-        var square = document.querySelector(`.square[data-row='${move.Row}'][data-col='${move.Column}']`);
-        square.classList.add('highlight');
-    });
 }

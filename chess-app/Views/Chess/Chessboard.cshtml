@@ -1,58 +1,22 @@
-@{
-    string[] colors = { "#f0d9b5", "#b58863" }; // light and dark colors
-}
 
 <!DOCTYPE html>
 <html>
-
 <head>
+    <meta name="viewport" content="width=device-width" />
     <title>Chessboard</title>
-    <style>
-        .chessboard {
-            display: grid;
-            grid-template-columns: repeat(8, 50px);
-            grid-template-rows: repeat(8, 50px);
-        }
-
-        .square {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .highlight {
-            border: 2px solid red;
-        }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/js/chess.js"></script>
+    <link rel="stylesheet" type="text/css" href="/chess_app.styles.css" /> <!-- Include your CSS here -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
 <body>
-    <h1>Chessboard</h1>
-    <div class="chessboard">
-        @for (int row = 0; row < 8; row++)
-        {
-            for (int col = 0; col < 8; col++)
-            {
-                string color = colors[(row + col) % 2];
-                <div class="square" data-row="@row" data-col="@col" style="background-color: @color;"
-                    onclick="squareClicked(@row, @col)">
-                    @{
-                        var piece = Model[row][col];
-                        if (piece != null)
-                        {
-                            <img src="~/img/@piece.ImagePath" alt="Piece Image" />
-                        }
-                    }
-                </div>
-            }
-        }
-    </div>
-</body>
-<div id="info">
-    <p id="selected-square"></p>
-    <p id="selected-piece"></p>
-</div>
+    <script src="~/js/chess.js"></script> <!-- Include your JavaScript file -->
+    <div id="chessboard-container"></div> <!-- Container for the chessboard -->
 
+    <!-- Display selected square and piece -->
+    <div id="info-container">
+        <div id="selected-square">Selected square: </div>
+        <div id="selected-piece">Piece on selected square: </div>
+    </div>
+
+    
+</body>
 </html>

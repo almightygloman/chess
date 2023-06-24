@@ -1,7 +1,7 @@
 public class Rook : Piece
 {
-    public Rook(PieceColor color, (int Row, int Column) position)
-        : base(color == PieceColor.White ? "white_rook.png" : "black_rook.png", color, position)
+    public Rook(string id, PieceColor color, (int Row, int Column) position)
+        : base(id, color == PieceColor.White ? "white_rook.png" : "black_rook.png", color, position)
     { }
 
 

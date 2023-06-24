@@ -19,9 +19,23 @@ namespace chess_app.Controllers
 
         public IActionResult Chessboard()
         {
-            // Pass the board state to the view
-            Piece?[][] boardState = chessboard.GetBoardState();
-            return View("Chessboard", boardState);
+            // Render the chessboard view (no data is passed to the view)
+            return View("Chessboard");
+        }
+
+        [HttpGet]
+        public IActionResult InitialBoardState()
+        {
+            try
+            {
+                Piece?[][] boardState = chessboard.GetBoardState();
+                return Json(new { boardState = boardState });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching the initial board state.");
+                return Json(new { success = false, responseText = "An error occurred while fetching the initial board state." });
+            }
         }
 
 
@@ -31,14 +45,14 @@ namespace chess_app.Controllers
         {
             try
             {
-                _logger.LogInformation("Moving piece from ({SourceRow}, {SourceColumn}) to ({TargetRow}, {TargetColumn})", sourceRow, sourceColumn, targetRow, targetColumn);
+                _logger.LogInformation("Moving " + chessboard.GetPieceAtPosition(sourceRow, sourceColumn).ID + " from ({SourceRow}, {SourceColumn}) to ({TargetRow}, {TargetColumn})", sourceRow, sourceColumn, targetRow, targetColumn);
                 // Check if the source and target positions are within the bounds of the chessboard
                 if (sourceRow < 0 || sourceRow >= 8 || sourceColumn < 0 || sourceColumn >= 8 || targetRow < 0 || targetRow >= 8 || targetColumn < 0 || targetColumn >= 8)
                 {
                     return Json(new { success = false, responseText = "Invalid move. Source or target position is out of bounds." });
                 }
 
-                Piece sourcePiece = chessboard.GetPieceAtPosition(sourceRow, sourceColumn);
+                Piece? sourcePiece = chessboard.GetPieceAtPosition(sourceRow, sourceColumn);
 
                 // Check if the source position is valid and contains a piece
                 if (sourcePiece == null)
@@ -50,7 +64,7 @@ namespace chess_app.Controllers
                 if (sourceRow == targetRow && sourceColumn == targetColumn)
                 {
                     var piece = chessboard.GetPieceAtPosition(sourceRow, sourceColumn);
-                    if (sourcePiece != null)
+                    if (piece != null)
                     {
                         var legalMoves = piece.CalculateLegalMoves(chessboard);
                         return Json(new { success = true, legalMoves = legalMoves });

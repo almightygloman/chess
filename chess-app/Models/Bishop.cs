@@ -1,7 +1,7 @@
 public class Bishop : Piece
 {
-    public Bishop(PieceColor color, (int Row, int Column) position)
-        : base(color == PieceColor.White ? "white_bishop.png" : "black_bishop.png", color, position)
+    public Bishop(string id, PieceColor color, (int Row, int Column) position)
+        : base(id, color == PieceColor.White ? "white_bishop.png" : "black_bishop.png", color, position)
     { }
 
     public override bool CanMoveTo((int Row, int Column) newPosition, Chessboard chessBoard)

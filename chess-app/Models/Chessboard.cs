@@ -14,33 +14,33 @@ public class Chessboard
     public void AddInitialPieces()
     {
         // Add white pieces
-        AddPiece(new Rook(PieceColor.White, (0, 0)));
-        AddPiece(new Pawn(PieceColor.White, (0, 1)));
-        AddPiece(new Bishop(PieceColor.White, (0, 2)));
-        AddPiece(new Pawn(PieceColor.White, (0, 3)));
-        AddPiece(new Pawn(PieceColor.White, (0, 4)));
-        AddPiece(new Bishop(PieceColor.White, (0, 5)));
-        AddPiece(new Pawn(PieceColor.White, (0, 6)));
-        AddPiece(new Rook(PieceColor.White, (0, 7)));
+        AddPiece(new Rook("White Rook", PieceColor.White, (0, 0)));
+        AddPiece(new Pawn("White Pawn",PieceColor.White, (0, 1)));
+        AddPiece(new Bishop("White Bishop",PieceColor.White, (0, 2)));
+        AddPiece(new Pawn("White Pawn",PieceColor.White, (0, 3)));
+        AddPiece(new Pawn("White Pawn", PieceColor.White, (0, 4)));
+        AddPiece(new Bishop("White Bishop" ,PieceColor.White, (0, 5)));
+        AddPiece(new Pawn("White Pawn", PieceColor.White, (0, 6)));
+        AddPiece(new Rook("White Rook", PieceColor.White, (0, 7)));
 
         for (int i = 0; i < 8; i++)
         {
-            AddPiece(new Rook(PieceColor.White, (1, i)));
+            AddPiece(new Rook("White Rook", PieceColor.White, (1, i)));
         }
 
         // Add black pieces
-        AddPiece(new Rook(PieceColor.Black, (7, 0)));
-        AddPiece(new Pawn(PieceColor.Black, (7, 1)));
-        AddPiece(new Bishop(PieceColor.Black, (7, 2)));
-        AddPiece(new Pawn(PieceColor.Black, (7, 3)));
-        AddPiece(new Pawn(PieceColor.Black, (7, 4)));
-        AddPiece(new Bishop(PieceColor.Black, (7, 5)));
-        AddPiece(new Pawn(PieceColor.Black, (7, 6)));
-        AddPiece(new Rook(PieceColor.Black, (7, 7)));
+        AddPiece(new Rook("Black Rook", PieceColor.Black, (7, 0)));
+        AddPiece(new Pawn("Black Pawn", PieceColor.Black, (7, 1)));
+        AddPiece(new Bishop("Black Bishop", PieceColor.Black, (7, 2)));
+        AddPiece(new Pawn("Black Pawn", PieceColor.Black, (7, 3)));
+        AddPiece(new Pawn("Black Pawn", PieceColor.Black, (7, 4)));
+        AddPiece(new Bishop("Black Bishop", PieceColor.Black, (7, 5)));
+        AddPiece(new Pawn("Black Pawn", PieceColor.Black, (7, 6)));
+        AddPiece(new Rook("Black Rook", PieceColor.Black, (7, 7)));
 
         for (int i = 0; i < 8; i++)
         {
-            AddPiece(new Bishop(PieceColor.Black, (6, i)));
+            AddPiece(new Bishop("Black Bishop", PieceColor.Black, (6, i)));
         }
     }
 
@@ -83,14 +83,16 @@ public class Chessboard
         // Get the piece's current position
         var currentPosition = piece.Position;
 
-        // Remove the piece from its current position
-        board[currentPosition.Row][currentPosition.Column] = null;
-
         // Update the piece's position
         piece.Position = newPosition;
 
         // Place the piece at the new position
         board[newPosition.row][newPosition.col] = piece;
+
+        // Remove the piece from its current position
+        board[currentPosition.Row][currentPosition.Column] = null;
+
+        
     }
     public Piece?[][] GetBoardState()
     {

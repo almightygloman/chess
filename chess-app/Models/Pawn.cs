@@ -1,7 +1,7 @@
 public class Pawn : Piece
 {
-    public Pawn(PieceColor color, (int Row, int Column) position)
-        : base(color == PieceColor.White ? "white_pawn.png" : "black_pawn.png", color, position)
+    public Pawn(string id, PieceColor color, (int Row, int Column) position)
+        : base(id, color == PieceColor.White ? "white_pawn.png" : "black_pawn.png", color, position)
     {
     }
 

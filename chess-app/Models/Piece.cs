@@ -6,14 +6,16 @@ public enum PieceColor
 
 public abstract class Piece
 {
+    public string ID{get; protected set;}
     public string ImagePath { get; protected set; }
     public PieceColor Color { get; protected set; }
     public bool IsCaptured { get; set; }
     public (int Row, int Column) Position { get; set; }
 
     // Constructor
-    public Piece(string imagePath, PieceColor color, (int Row, int Column) position)
+    public Piece(string id, string imagePath, PieceColor color, (int Row, int Column) position)
     {
+        ID = id;
         ImagePath = imagePath;
         Color = color;
         IsCaptured = false;
