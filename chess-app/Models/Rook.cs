@@ -13,8 +13,47 @@ public class Rook : Piece
             return false;
         }
 
-        // Rook can move horizontally or vertically
-        return newPosition.Row == Position.Row || newPosition.Column == Position.Column;
+        // Check if the move is either horizontal or vertical
+        bool isHorizontalMove = newPosition.Row == Position.Row;
+        bool isVerticalMove = newPosition.Column == Position.Column;
+
+        if (!isHorizontalMove && !isVerticalMove)
+        {
+            // Rook can only move horizontally or vertically
+            return false;
+        }
+
+        // Check if there are pieces in the way
+        int rowDirection = 0;
+        int colDirection = 0;
+
+        if (isHorizontalMove)
+        {
+            colDirection = newPosition.Column > Position.Column ? 1 : -1;
+        }
+        else
+        {
+            rowDirection = newPosition.Row > Position.Row ? 1 : -1;
+        }
+
+        int currentRow = Position.Row + rowDirection;
+        int currentCol = Position.Column + colDirection;
+
+        while (currentRow != newPosition.Row || currentCol != newPosition.Column)
+        {
+            // Check if there is a piece in the current square
+            if (chessBoard.GetPieceAtPosition(currentRow, currentCol) != null)
+            {
+                // There is a piece blocking the path
+                return false;
+            }
+
+            currentRow += rowDirection;
+            currentCol += colDirection;
+        }
+
+        // No pieces are in the way, the move is valid
+        return true;
     }
     public override List<(int Row, int Column)> CalculateLegalMoves(Chessboard chessBoard)
     {

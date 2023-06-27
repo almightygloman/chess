@@ -25,7 +25,7 @@ public class Chessboard
 
         for (int i = 0; i < 8; i++)
         {
-            AddPiece(new Rook("White Rook", PieceColor.White, (1, i)));
+            AddPiece(new Pawn("White Pawn", PieceColor.White, (1, i)));
         }
 
         // Add black pieces
@@ -40,7 +40,7 @@ public class Chessboard
 
         for (int i = 0; i < 8; i++)
         {
-            AddPiece(new Bishop("Black Bishop", PieceColor.Black, (6, i)));
+            AddPiece(new Pawn("Black Pawn", PieceColor.Black, (6, i)));
         }
     }
 

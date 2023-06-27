@@ -7,20 +7,19 @@ namespace chess_app.Controllers
         private Chessboard chessboard; // Declare chessboard as a field
         private readonly ILogger<ChessController> _logger;
 
-        public ChessController(ILogger<ChessController> logger)
+        public ChessController(Chessboard chessboard, ILogger<ChessController> logger)
         {
-            // Create an instance of the Chessboard model
-            chessboard = new Chessboard();
-
-            // Add pieces to the chessboard
-            chessboard.AddInitialPieces();
+            this.chessboard = chessboard;
             _logger = logger;
         }
 
         public IActionResult Chessboard()
         {
-            // Render the chessboard view (no data is passed to the view)
-            return View("Chessboard");
+            Piece?[][] boardState = chessboard.GetBoardState();
+
+            // Pass the board state to the view
+            return View("Chessboard", boardState);
+
         }
 
         [HttpGet]

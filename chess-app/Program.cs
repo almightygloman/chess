@@ -6,6 +6,12 @@ builder.Services.AddControllersWithViews();
 // Add session services
 builder.Services.AddSession();
 
+// Add Chessboard as a singleton service
+builder.Services.AddSingleton<Chessboard>();
+
+// Add ChessboardInitializer as a hosted service
+builder.Services.AddHostedService<ChessboardInitializer>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
