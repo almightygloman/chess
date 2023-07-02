@@ -15,12 +15,12 @@ public class Chessboard
     {
         // Add white pieces
         AddPiece(new Rook("White Rook", PieceColor.White, (0, 0)));
-        AddPiece(new Pawn("White Pawn",PieceColor.White, (0, 1)));
+        AddPiece(new Knight("White Knight",PieceColor.White, (0, 1)));
         AddPiece(new Bishop("White Bishop",PieceColor.White, (0, 2)));
-        AddPiece(new Pawn("White Pawn",PieceColor.White, (0, 3)));
-        AddPiece(new Pawn("White Pawn", PieceColor.White, (0, 4)));
+        AddPiece(new Queen("White Queen",PieceColor.White, (0, 3)));
+        AddPiece(new King("White King", PieceColor.White, (0, 4)));
         AddPiece(new Bishop("White Bishop" ,PieceColor.White, (0, 5)));
-        AddPiece(new Pawn("White Pawn", PieceColor.White, (0, 6)));
+        AddPiece(new Knight("White Knight", PieceColor.White, (0, 6)));
         AddPiece(new Rook("White Rook", PieceColor.White, (0, 7)));
 
         for (int i = 0; i < 8; i++)
@@ -30,12 +30,12 @@ public class Chessboard
 
         // Add black pieces
         AddPiece(new Rook("Black Rook", PieceColor.Black, (7, 0)));
-        AddPiece(new Pawn("Black Pawn", PieceColor.Black, (7, 1)));
+        AddPiece(new Knight("Black Knight", PieceColor.Black, (7, 1)));
         AddPiece(new Bishop("Black Bishop", PieceColor.Black, (7, 2)));
-        AddPiece(new Pawn("Black Pawn", PieceColor.Black, (7, 3)));
-        AddPiece(new Pawn("Black Pawn", PieceColor.Black, (7, 4)));
+        AddPiece(new Queen("Black Queen", PieceColor.Black, (7, 3)));
+        AddPiece(new King("Black King", PieceColor.Black, (7, 4)));
         AddPiece(new Bishop("Black Bishop", PieceColor.Black, (7, 5)));
-        AddPiece(new Pawn("Black Pawn", PieceColor.Black, (7, 6)));
+        AddPiece(new Knight("Black Knight", PieceColor.Black, (7, 6)));
         AddPiece(new Rook("Black Rook", PieceColor.Black, (7, 7)));
 
         for (int i = 0; i < 8; i++)

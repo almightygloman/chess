@@ -102,5 +102,27 @@ namespace chess_app.Controllers
                 return Json(new { success = false, responseText = "An error occurred while moving the piece. Please try again." });
             }
         }
+        /*
+        [HttpGet]
+        public IActionResult GetPieceInfo(int row, int col)
+        {
+            try
+            {
+                // Query your game state to find out which piece is on the square
+                // Assume you have a method GetPieceNameAtPosition that returns the name of the piece
+                string pieceName;
+                if(chessboard.GetPieceAtPosition(row, col)!= null){
+                    pieceName = chessboard.GetPieceAtPosition(row, col).ID;
+                }
+                
+                return Json(new { pieceName = pieceName });
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                return Json(new { error = "Error retrieving piece information" });
+            }
+        }
+        */
     }
 }
