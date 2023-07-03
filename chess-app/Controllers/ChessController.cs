@@ -44,7 +44,7 @@ namespace chess_app.Controllers
         {
             try
             {
-                _logger.LogInformation("Moving " + chessboard.GetPieceAtPosition(sourceRow, sourceColumn).ID + " from ({SourceRow}, {SourceColumn}) to ({TargetRow}, {TargetColumn})", sourceRow, sourceColumn, targetRow, targetColumn);
+                _logger.LogInformation("Moving piece from ({SourceRow}, {SourceColumn}) to ({TargetRow}, {TargetColumn})", sourceRow, sourceColumn, targetRow, targetColumn);
                 // Check if the source and target positions are within the bounds of the chessboard
                 if (sourceRow < 0 || sourceRow >= 8 || sourceColumn < 0 || sourceColumn >= 8 || targetRow < 0 || targetRow >= 8 || targetColumn < 0 || targetColumn >= 8)
                 {
@@ -102,27 +102,5 @@ namespace chess_app.Controllers
                 return Json(new { success = false, responseText = "An error occurred while moving the piece. Please try again." });
             }
         }
-        /*
-        [HttpGet]
-        public IActionResult GetPieceInfo(int row, int col)
-        {
-            try
-            {
-                // Query your game state to find out which piece is on the square
-                // Assume you have a method GetPieceNameAtPosition that returns the name of the piece
-                string pieceName;
-                if(chessboard.GetPieceAtPosition(row, col)!= null){
-                    pieceName = chessboard.GetPieceAtPosition(row, col).ID;
-                }
-                
-                return Json(new { pieceName = pieceName });
-            }
-            catch (Exception ex)
-            {
-                // Handle exceptions
-                return Json(new { error = "Error retrieving piece information" });
-            }
-        }
-        */
     }
 }

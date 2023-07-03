@@ -51,14 +51,10 @@ function fetchInitialState() {
 function squareClicked(row, col) {
     console.log(`Clicked square at row: ${row}, col: ${col}`);
     var square = document.querySelector(`.square[data-row='${row}'][data-col='${col}']`);
-    var piece = square.querySelector('img');
-    var pieceName = piece ? piece.alt : 'No piece';  // Assuming you have alt attributes for your images indicating piece names
 
     var selectedSquare = document.getElementById('selected-square');
-    var selectedPiece = document.getElementById('selected-piece');
 
     selectedSquare.textContent = `Selected square: (${row}, ${col})`;
-    selectedPiece.textContent = `Piece on selected square: ${pieceName}`;
     if (sourcePosition == null) {
         sourcePosition = { row: row, col: col };
     } else {
@@ -109,7 +105,7 @@ function updateBoard(boardState) {
 
             var piece = boardState[row][col];
             var img = square.querySelector('img');
-            
+
             console.log(`Processing square at row=${row}, col=${col}, piece=`, piece);
 
             if (piece && piece.imagePath) {
