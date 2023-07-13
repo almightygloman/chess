@@ -1,5 +1,10 @@
 var sourcePosition = null;
 
+let gameState = {
+    turnColor: true,  // true for white, false for black
+    // Add any other game state variables you need here
+};
+
 document.addEventListener('DOMContentLoaded', function () {
     generateChessboard();
     fetchInitialState();
@@ -66,12 +71,14 @@ function squareClicked(row, col) {
                 sourceRow: sourcePosition.row,
                 sourceColumn: sourcePosition.col,
                 targetRow: targetPosition.row,
-                targetColumn: targetPosition.col
+                targetColumn: targetPosition.col,
+                turnColor: gameState.turnColor
             },
             type: 'POST',
             success: function (response) {
                 if (response.success) {
                     // Update the board state after a move
+                    gameState.turnColor = !gameState.turnColor;
                     updateBoard(response.boardState);
                 } else {
                     alert(response.responseText);

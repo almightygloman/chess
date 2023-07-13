@@ -6,7 +6,11 @@ public class King : Piece
 
     public override bool CanMoveTo((int Row, int Column) newPosition, Chessboard chessBoard)
     {
+        if(newPosition.Row > Position.Row + 1 || newPosition.Row < Position.Row - 1 || newPosition.Column > Position.Column + 1 || newPosition.Column < Position.Column - 1){
+            return false;
+        }
         return true;
+        
     }
     
     public override List<(int Row, int Column)> CalculateLegalMoves(Chessboard chessBoard)

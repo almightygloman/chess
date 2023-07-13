@@ -18,7 +18,7 @@ public class Pawn : Piece
         int columnDifference = Math.Abs(newPosition.Column - Position.Column);
 
         // Pawns can only move forward
-        if (Color == PieceColor.White && rowDifference < 0 || Color == PieceColor.Black && rowDifference > 0)
+        if (Color == PieceColor.Black && rowDifference < 0 || Color == PieceColor.White && rowDifference > 0)
         {
             return false;
         }
@@ -32,7 +32,7 @@ public class Pawn : Piece
         // Pawns can move forward two squares only on their first move
         if (Math.Abs(rowDifference) == 2)
         {
-            if (Color == PieceColor.White && Position.Row != 1 || Color == PieceColor.Black && Position.Row != 6)
+            if (Color == PieceColor.Black && Position.Row != 1 || Color == PieceColor.White && Position.Row != 6)
             {
                 return false;
             }
@@ -65,7 +65,7 @@ public class Pawn : Piece
         var legalMoves = new List<(int Row, int Column)>();
 
         // Check if the new position is within the bounds of the chessboard
-        if (Color == PieceColor.White)
+        if (Color == PieceColor.Black)
         {
             // Pawn can move forward one row (unless it's the first move, then it can move two rows)
             if (Position.Row - 1 >= 0)
@@ -78,7 +78,7 @@ public class Pawn : Piece
                 }
             }
         }
-        else if (Color == PieceColor.Black)
+        else if (Color == PieceColor.White)
         {
             // Pawn can move forward one row (unless it's the first move, then it can move two rows)
             if (Position.Row + 1 < 8)

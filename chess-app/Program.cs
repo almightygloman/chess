@@ -9,6 +9,9 @@ builder.Services.AddSession();
 // Add Chessboard as a singleton service
 builder.Services.AddSingleton<Chessboard>();
 
+// Add Game as a singleton service
+builder.Services.AddSingleton<Game>();
+
 // Add ChessboardInitializer as a hosted service
 builder.Services.AddHostedService<ChessboardInitializer>();
 
