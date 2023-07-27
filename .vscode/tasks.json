@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/chess-app/chess-app.csproj",
+                "${workspaceFolder}/ChessApp/ChessApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/chess-app/chess-app.csproj",
+                "${workspaceFolder}/ChessApp/ChessApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/chess-app/chess-app.csproj"
+                "${workspaceFolder}/ChessApp/ChessApp.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

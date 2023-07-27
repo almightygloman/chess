@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/chess-app/bin/Debug/net6.0/chess-app.dll",
+            "program": "${workspaceFolder}/ChessApp/bin/Debug/net6.0/ChessApp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/chess-app",
+            "cwd": "${workspaceFolder}/ChessApp",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

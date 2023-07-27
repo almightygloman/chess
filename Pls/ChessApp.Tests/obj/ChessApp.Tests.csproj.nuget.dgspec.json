@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/ChessApp.Tests.csproj": {}
+  },
+  "projects": {
+    "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/ChessApp.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/ChessApp.Tests.csproj",
+        "projectName": "ChessApp.Tests",
+        "projectPath": "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/ChessApp.Tests.csproj",
+        "packagesPath": "/home/zachivanovs/.nuget/packages/",
+        "outputPath": "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zachivanovs/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.120/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
