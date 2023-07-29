@@ -113,5 +113,27 @@ public class Tests
             Assert.IsFalse(resolve);
 
         }
+        [Test]
+        public void TestProtectedPieceCheck(){
+            Game game = new Game();
+            game.isWhiteTurn = true;
+            Piece wking = new King(PieceColor.White, (0,6));
+            Piece bking = new King(PieceColor.Black, (7,6));
+            Piece bbishop = new Knight(PieceColor.Black, (0,5));
+            Piece bqueen = new Queen(PieceColor.Black, (0,0));
+            Piece wpawn1 = new Pawn(PieceColor.White, (1,5));
+            Piece wpawn2 = new Pawn(PieceColor.White, (1,6));
+            Piece wpawn3 = new Pawn(PieceColor.White, (1,7));
+            game.Chessboard.AddPiece(wking);
+            game.Chessboard.AddPiece(bbishop);
+            game.Chessboard.AddPiece(bqueen);
+            game.Chessboard.AddPiece(wpawn1);
+            game.Chessboard.AddPiece(wpawn2);
+            game.Chessboard.AddPiece(wpawn3);
+
+            bool resolve = game.IsValidMove(wking, 0, 5);
+            Assert.IsFalse(resolve);
+
+        }
     }
 }

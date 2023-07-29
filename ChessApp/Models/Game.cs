@@ -16,7 +16,19 @@ public class Game
     {
         Chessboard = new Chessboard();
         isWhiteTurn = true;
-        Chessboard.AddInitialPieces();
+        //Chessboard.AddInitialPieces();
+        Piece wking = new King(PieceColor.White, (0,6));
+            Piece bbishop = new Knight(PieceColor.Black, (0,5));
+            Piece bqueen = new Queen(PieceColor.Black, (0,0));
+            Piece wpawn1 = new Pawn(PieceColor.White, (1,5));
+            Piece wpawn2 = new Pawn(PieceColor.White, (1,6));
+            Piece wpawn3 = new Pawn(PieceColor.White, (1,7));
+            Chessboard.AddPiece(wking);
+            Chessboard.AddPiece(bbishop);
+            Chessboard.AddPiece(bqueen);
+            Chessboard.AddPiece(wpawn1);
+            Chessboard.AddPiece(wpawn2);
+            Chessboard.AddPiece(wpawn3);
     }
 
     public bool IsValidMove(Piece? sourcePiece, int targetRow, int targetColumn)
@@ -46,6 +58,26 @@ public class Game
         else if (IsPinned(sourcePiece, boardState) && !CanMoveToUnpin(sourcePiece, targetRow, targetColumn))
         {
             Console.WriteLine("The piece is pinned and cannot move to the target position.");
+            return false;
+        }
+
+        // Creating a copy of the board state to simulate the move
+        var tempBoardState = new Piece?[8][];
+        for (int i = 0; i < 8; i++)
+        {
+            tempBoardState[i] = new Piece?[8];
+            Array.Copy(boardState[i], tempBoardState[i], 8);
+        }
+
+        // Simulating the move
+        tempBoardState[targetRow][targetColumn] = tempBoardState[sourcePiece.Position.Row][sourcePiece.Position.Column];
+        tempBoardState[sourcePiece.Position.Row][sourcePiece.Position.Column] = null;
+
+        // After the move, check if the king is under attack
+        var kingPosition = GetKingPosition(sourcePiece.Color, tempBoardState);
+        if (IsPositionUnderAttack(kingPosition, sourcePiece.Color == PieceColor.White ? PieceColor.Black : PieceColor.White, tempBoardState))
+        {
+            Console.WriteLine("The King would be in check after this move.");
             return false;
         }
 
