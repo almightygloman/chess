@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/zachivanovs/repos/chess/Pls/ChessApp/ChessApp.csproj": {}
+    "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj": {}
   },
   "projects": {
-    "/home/zachivanovs/repos/chess/Pls/ChessApp/ChessApp.csproj": {
+    "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zachivanovs/repos/chess/Pls/ChessApp/ChessApp.csproj",
+        "projectUniqueName": "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj",
         "projectName": "ChessApp",
-        "projectPath": "/home/zachivanovs/repos/chess/Pls/ChessApp/ChessApp.csproj",
+        "projectPath": "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj",
         "packagesPath": "/home/zachivanovs/.nuget/packages/",
-        "outputPath": "/home/zachivanovs/repos/chess/Pls/ChessApp/obj/",
+        "outputPath": "/home/zachivanovs/repos/chess/ChessApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/zachivanovs/.nuget/NuGet/NuGet.Config"

@@ -32,5 +32,7 @@ public abstract class Piece
     public abstract bool CanMoveTo((int Row, int Column) newPosition, Piece?[][] board);
     public abstract List<(int Row, int Column)> CalculateLegalMoves(Game game, bool checkKingSafety);
 
+    public abstract bool CanAttack((int Row, int Column) position, Piece?[][] board);
+
     // Other methods and properties specific to each type of piece
 }

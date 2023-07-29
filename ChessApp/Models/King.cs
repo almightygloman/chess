@@ -22,6 +22,13 @@ public class King : Piece
         {
             return false;
         }
+
+        // If the new position is occupied by an enemy piece, return true immediately
+        if (pieceAtNewPosition != null && pieceAtNewPosition.Color != this.Color)
+        {
+            return true;
+        }
+
         // Check if the new position is under attack by any enemy piece
         foreach (var row in board)
         {
@@ -32,9 +39,17 @@ public class King : Piece
                 {
                     continue;
                 }
+                if (piece is King)
+                {
+                    if (Math.Abs(piece.Position.Row - newPosition.Row) <= 1 && Math.Abs(piece.Position.Column - newPosition.Column) <= 1)
+                    {
+                        return false;
+                    }
+                    continue;
+                }
 
                 // If the piece can move to the new position, return false
-                if (piece.CanMoveTo(newPosition, board))
+                if (piece.CanAttack(newPosition, board))
                 {
                     return false;
                 }
@@ -42,6 +57,35 @@ public class King : Piece
         }
         return true;
     }
+
+    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    {
+        // Check if the King can move to the position
+        if (!CanMoveTo(position, board)) return false;
+
+        // Check if there is an enemy piece at the position
+        Piece? pieceAtPosition = board[position.Row][position.Column];
+        if (pieceAtPosition == null || pieceAtPosition.Color == this.Color) return false;
+
+        // Check if the enemy piece is protected
+        PieceColor enemyColor = this.Color == PieceColor.White ? PieceColor.Black : PieceColor.White;
+        for (int row = 0; row < 8; row++)
+        {
+            for (int col = 0; col < 8; col++)
+            {
+                Piece? piece = board[row][col];
+                if (piece != null && piece.Color == enemyColor)
+                {
+                    // Use CanMoveTo instead of CanAttack to avoid infinite recursion
+                    if (piece.CanMoveTo(position, board)) return false;
+                }
+            }
+        }
+
+        // The enemy piece is not protected, so the King can capture it
+        return true;
+    }
+
 
 
     public override List<(int Row, int Column)> CalculateLegalMoves(Game game, bool checkKingSafety = true)

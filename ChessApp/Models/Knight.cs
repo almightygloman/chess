@@ -29,6 +29,11 @@ public class Knight : Piece
 
         return false;
     }
+    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    {
+        if (!CanMoveTo(position, board)) return false;
+        return true;
+    }
 
     public override List<(int Row, int Column)> CalculateLegalMoves(Game game, bool checkKingSafety = true)
     {

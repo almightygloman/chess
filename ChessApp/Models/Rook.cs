@@ -9,10 +9,11 @@ public class Rook : Piece
     public override bool CanMoveTo((int Row, int Column) newPosition, Piece?[][] board)
     {
         // Check if the new position is within the bounds of the chessboard
-        if (newPosition.Row < 0 || newPosition.Row >= 8 || newPosition.Column < 0 || newPosition.Column >= 8)
+        if (newPosition.Row < 0 || newPosition.Row > 7 || newPosition.Column < 0 || newPosition.Column > 7)
         {
             return false;
         }
+
 
         // Check if the move is either horizontal or vertical
         bool isHorizontalMove = newPosition.Row == Position.Row;
@@ -62,6 +63,12 @@ public class Rook : Piece
 
 
         // No pieces are in the way, the move is valid
+        return true;
+    }
+
+    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    {
+        if (!CanMoveTo(position, board)) return false;
         return true;
     }
     public override List<(int Row, int Column)> CalculateLegalMoves(Game game, bool checkKingSafety = true)

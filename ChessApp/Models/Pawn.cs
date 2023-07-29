@@ -18,7 +18,7 @@ public class Pawn : Piece
         int columnDifference = Math.Abs(newPosition.Column - Position.Column);
 
         // Pawns can only move forward
-        if (Color == PieceColor.Black && rowDifference < 0 || Color == PieceColor.White && rowDifference > 0)
+        if (Color == PieceColor.White && rowDifference < 0 || Color == PieceColor.Black && rowDifference > 0)
         {
             return false;
         }
@@ -32,7 +32,7 @@ public class Pawn : Piece
         // Pawns can move forward two squares only on their first move
         if (Math.Abs(rowDifference) == 2)
         {
-            if (Color == PieceColor.Black && Position.Row != 1 || Color == PieceColor.White && Position.Row != 6)
+            if (Color == PieceColor.White && Position.Row != 1 || Color == PieceColor.Black && Position.Row != 6)
             {
                 return false;
             }
@@ -68,35 +68,34 @@ public class Pawn : Piece
         if (Color == PieceColor.Black)
         {
             // Pawn can move forward one row (unless it's the first move, then it can move two rows)
-            if (Position.Row - 1 >= 0)
+            if (Position.Row + 1 < 8)
             {
-                legalMoves.Add((Position.Row - 1, Position.Column));
+                legalMoves.Add((Position.Row + 1, Position.Column));
 
                 if (Position.Row == 6)
                 {
-                    legalMoves.Add((Position.Row - 2, Position.Column));
+                    legalMoves.Add((Position.Row + 2, Position.Column));
                 }
             }
         }
         else if (Color == PieceColor.White)
         {
             // Pawn can move forward one row (unless it's the first move, then it can move two rows)
-            if (Position.Row + 1 < 8)
+            if (Position.Row - 1 >= 0)
             {
-                legalMoves.Add((Position.Row + 1, Position.Column));
+                legalMoves.Add((Position.Row - 1, Position.Column));
 
                 if (Position.Row == 1)
                 {
-                    legalMoves.Add((Position.Row + 2, Position.Column));
+                    legalMoves.Add((Position.Row - 2, Position.Column));
                 }
             }
         }
 
         // Check for possible captures
-        // Check for possible captures
         int captureColumnLeft = Position.Column - 1;
         int captureColumnRight = Position.Column + 1;
-        int captureRow = Color == PieceColor.Black ? Position.Row - 1 : Position.Row + 1;
+        int captureRow = Color == PieceColor.Black ? Position.Row + 1 : Position.Row - 1;
 
         if (captureColumnLeft >= 0)
         {
@@ -116,7 +115,27 @@ public class Pawn : Piece
             }
         }
 
-
         return legalMoves;
     }
+    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    {
+        // Calculate the difference between the current and new positions
+        int rowDifference = position.Row - Position.Row;
+        int columnDifference = Math.Abs(position.Column - Position.Column);
+
+        // Pawns can only capture diagonally
+        if (Color == PieceColor.Black && rowDifference != -1 || Color == PieceColor.White && rowDifference != 1)
+        {
+            return false;
+        }
+
+        // Pawns can only capture in one column away
+        if (columnDifference != 1)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
 }

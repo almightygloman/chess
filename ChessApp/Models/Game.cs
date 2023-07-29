@@ -21,26 +21,49 @@ public class Game
 
     public bool IsValidMove(Piece? sourcePiece, int targetRow, int targetColumn)
     {
-        if (sourcePiece == null || !IsPieceTurn(sourcePiece) || IsMoveBlockedBySameColorPiece(sourcePiece, targetRow, targetColumn))
+        if (sourcePiece == null)
         {
+            Console.WriteLine("Source piece is null.");
+            return false;
+        }
+        else if (!IsPieceTurn(sourcePiece))
+        {
+            Console.WriteLine($"It's not the {sourcePiece.Color}'s turn.");
+            return false;
+        }
+        else if (IsMoveBlockedBySameColorPiece(sourcePiece, targetRow, targetColumn))
+        {
+            Console.WriteLine("The move is blocked by a piece of the same color.");
             return false;
         }
 
         var boardState = Chessboard.GetBoardState();
-        if (!sourcePiece.CanMoveTo((targetRow, targetColumn), boardState) || IsPinned(sourcePiece,boardState) && !CanMoveToUnpin(sourcePiece, targetRow, targetColumn))
+        if (!sourcePiece.CanMoveTo((targetRow, targetColumn), boardState))
         {
+            Console.WriteLine($"The {sourcePiece.Type} cannot move to the target position.");
+            return false;
+        }
+        else if (IsPinned(sourcePiece, boardState) && !CanMoveToUnpin(sourcePiece, targetRow, targetColumn))
+        {
+            Console.WriteLine("The piece is pinned and cannot move to the target position.");
             return false;
         }
 
         var checkingPieces = GetCheckingPieces(sourcePiece.Color, boardState);
-
         if (checkingPieces.Count > 0)
         {
-            return CanResolveCheck(sourcePiece, (targetRow, targetColumn), checkingPieces);
+            bool canResolveCheck = CanResolveCheck(sourcePiece, (targetRow, targetColumn), checkingPieces);
+            if (!canResolveCheck)
+            {
+                Console.WriteLine("The move doesn't resolve the check situation.");
+                return false;
+            }
         }
 
+        Console.WriteLine("The move is valid.");
         return true;
     }
+
 
     private bool IsPieceTurn(Piece piece)
     {
@@ -63,7 +86,27 @@ public class Game
 
     private bool CanResolveCheck(Piece sourcePiece, (int row, int column) targetPosition, List<Piece> checkingPieces)
     {
-        if (sourcePiece.Type == PieceType.King && IsPositionUnderAttack(targetPosition, sourcePiece.Color == PieceColor.White ? PieceColor.Black : PieceColor.White, Chessboard.GetBoardState()))
+        Console.WriteLine($"CanResolveCheck: SourcePiece = {sourcePiece}, TargetPosition = {targetPosition}, CheckingPiecesCount = {checkingPieces.Count}");
+
+        // Create a copy of the current board state
+        var tempBoardState = Chessboard.GetBoardState();
+
+        // Save the original position of the piece
+        var originalPosition = (sourcePiece.Position.Row, sourcePiece.Position.Column);
+
+        // Move the piece in the copied board state
+        tempBoardState[targetPosition.row][targetPosition.column] = sourcePiece;
+        // Clear the original position
+        tempBoardState[originalPosition.Row][originalPosition.Column] = null;
+
+        // Check if the moved piece was a king
+        var kingPosition = sourcePiece.Type == PieceType.King ? targetPosition : GetKingPosition(sourcePiece.Color, tempBoardState);
+
+        bool isKingInCheck = IsKingInCheck(kingPosition, sourcePiece.Color, tempBoardState);
+
+        Console.WriteLine($"CanResolveCheck: KingPosition = {kingPosition}, isKingInCheck = {isKingInCheck}");
+
+        if (sourcePiece.Type == PieceType.King && isKingInCheck)
         {
             return false;
         }
@@ -79,7 +122,10 @@ public class Game
             return sourcePiece.Type == PieceType.King;
         }
 
-        return sourcePiece.CanMoveTo(checkingPiece.Position, Chessboard.GetBoardState()) || IsMoveResolvingCheck(sourcePiece, targetPosition);
+        bool canMoveTo = sourcePiece.CanMoveTo(checkingPiece.Position, tempBoardState);
+        Console.WriteLine($"CanResolveCheck: CanMoveTo = {canMoveTo}");
+
+        return !isKingInCheck;
     }
 
     public Piece? GetPieceAtPosition(int row, int col)
@@ -133,8 +179,7 @@ public class Game
                 Piece? piece = board[row][col];
                 if (piece != null && piece.Color != kingColor)
                 {
-                    var possibleMoves = piece.CalculateLegalMoves(this, false);
-                    if (possibleMoves.Any(move => move.Row == kingPosition.row && move.Column == kingPosition.col))
+                    if (piece.CanAttack(kingPosition, board))
                     {
                         if (piece.Type != PieceType.Knight && !IsPathClear((row, col), kingPosition, board))
                         {
@@ -149,6 +194,7 @@ public class Game
 
         return checkingPieces;
     }
+
 
 
 
@@ -182,6 +228,13 @@ public class Game
         var checkingPieces = GetCheckingPieces(kingColor, boardState);
         foreach (var checkingPiece in checkingPieces)
         {
+            // Pawns have unique capturing rules
+            if (checkingPiece.Type == PieceType.Pawn && !IsPawnCapturing(kingPosition, checkingPiece, boardState))
+            {
+                return false;
+            }
+
+            // For other piece types, if the path is clear, it's a check
             if (IsPathClear(checkingPiece.Position, kingPosition, boardState))
             {
                 return true; // The king is in check
@@ -297,7 +350,7 @@ public class Game
                 if (piece != null && piece.Color == attackingColor)
                 {
                     // Check if the piece can move to the target position
-                    if (piece.CanMoveTo(position, board))
+                    if (piece.CanAttack(position, board))
                     {
                         // If it can, then the position is under attack
                         return true;
@@ -309,31 +362,6 @@ public class Game
         // If no piece of the attacking color can move to the position, it's not under attack
         return false;
     }
-
-    public bool IsMoveResolvingCheck(Piece sourcePiece, (int row, int col) targetPosition)
-    {
-        // Create a copy of the current board state
-        var tempBoardState = Chessboard.GetBoardState();
-
-        // Move the piece in the copied board state
-        tempBoardState[targetPosition.row][targetPosition.col] = sourcePiece;
-
-        bool isKingInCheck = IsKingInCheck(sourcePiece.Color, tempBoardState);
-        if (isKingInCheck)
-        {
-            Console.WriteLine($"Move from {sourcePiece.Position} to {targetPosition} does not resolve check.");
-        }
-        else
-        {
-            Console.WriteLine($"Move from {sourcePiece.Position} to {targetPosition} resolves check.");
-        }
-
-        // Check if the king is still in check in the copied board state
-        return !isKingInCheck;
-    }
-
-
-
 
     private List<(int row, int col)> GetPath((int row, int col) from, (int row, int col) to)
     {
@@ -361,6 +389,23 @@ public class Game
 
         return path;
     }
+
+    public bool IsPawnCapturing((int row, int col) kingPosition, Piece pawn, Piece?[][] boardState)
+    {
+        // If the pawn is white, it captures diagonally to the north
+        if (pawn.Color == PieceColor.White)
+        {
+            return kingPosition == (pawn.Position.Row + 1, pawn.Position.Column - 1)
+                || kingPosition == (pawn.Position.Row + 1, pawn.Position.Column + 1);
+        }
+        // If the pawn is black, it captures diagonally to the south
+        else
+        {
+            return kingPosition == (pawn.Position.Row - 1, pawn.Position.Column - 1)
+                || kingPosition == (pawn.Position.Row - 1, pawn.Position.Column + 1);
+        }
+    }
+
 
 
     public List<Piece> GetAllPieces()
