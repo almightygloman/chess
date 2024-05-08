@@ -18,6 +18,7 @@ public abstract class Piece
     public bool IsCaptured { get; set; }
     public (int Row, int Column) Position { get; set; }
 
+
     // Constructor
     public Piece(PieceType type, string imagePath, PieceColor color, (int Row, int Column) position)
     {
@@ -30,9 +31,9 @@ public abstract class Piece
 
     // Method to check if the piece can move to the specified position
     public abstract bool CanMoveTo((int Row, int Column) newPosition, Piece?[][] board);
-    public abstract List<(int Row, int Column)> CalculateLegalMoves(Game game, bool checkKingSafety);
 
     public abstract bool CanAttack((int Row, int Column) position, Piece?[][] board);
+
 
     // Other methods and properties specific to each type of piece
 }

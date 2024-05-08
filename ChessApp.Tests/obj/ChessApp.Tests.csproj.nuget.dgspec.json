@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/ChessApp.Tests.csproj": {}
+    "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/ChessApp.Tests.csproj": {}
   },
   "projects": {
-    "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/ChessApp.Tests.csproj": {
+    "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/ChessApp.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/ChessApp.Tests.csproj",
+        "projectUniqueName": "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/ChessApp.Tests.csproj",
         "projectName": "ChessApp.Tests",
-        "projectPath": "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/ChessApp.Tests.csproj",
-        "packagesPath": "/home/zachivanovs/.nuget/packages/",
-        "outputPath": "/home/zachivanovs/repos/chess/Pls/ChessApp.Tests/obj/",
+        "projectPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/ChessApp.Tests.csproj",
+        "packagesPath": "/home/zach/.nuget/packages/",
+        "outputPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/zachivanovs/.nuget/NuGet/NuGet.Config"
+          "/home/zach/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -25,7 +25,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj": {
+                "projectPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -70,7 +74,62 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.120/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj",
+        "projectName": "ChessApp",
+        "projectPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj",
+        "packagesPath": "/home/zach/.nuget/packages/",
+        "outputPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zach/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
         }
       }
     }

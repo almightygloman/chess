@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5ZntYnfg87TJbJKLPzk3WAzBn+3EUOoGET9uZFmYfd4=",
+  "Hash": "ow9aoFWWMS95aViiSlxDUCkdZuEDu7G/Qc0xKFlnBSM=",
   "Source": "ChessApp",
   "BasePath": "_content/ChessApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ChessApp/wwwroot",
       "Source": "ChessApp",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/obj/Debug/net6.0/scopedcss/bundle/ChessApp.styles.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/Debug/net6.0/scopedcss/bundle/ChessApp.styles.css",
       "SourceId": "ChessApp",
       "SourceType": "Computed",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/obj/Debug/net6.0/scopedcss/bundle/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/Debug/net6.0/scopedcss/bundle/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "ChessApp.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/zachivanovs/repos/chess/ChessApp/obj/Debug/net6.0/scopedcss/bundle/ChessApp.styles.css"
+      "OriginalItemSpec": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/Debug/net6.0/scopedcss/bundle/ChessApp.styles.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/obj/Debug/net6.0/scopedcss/projectbundle/ChessApp.bundle.scp.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/Debug/net6.0/scopedcss/projectbundle/ChessApp.bundle.scp.css",
       "SourceId": "ChessApp",
       "SourceType": "Computed",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/obj/Debug/net6.0/scopedcss/projectbundle/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/Debug/net6.0/scopedcss/projectbundle/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "ChessApp.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/zachivanovs/repos/chess/ChessApp/obj/Debug/net6.0/scopedcss/projectbundle/ChessApp.bundle.scp.css"
+      "OriginalItemSpec": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/Debug/net6.0/scopedcss/projectbundle/ChessApp.bundle.scp.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/css/ChessApp.styles.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/css/ChessApp.styles.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "css/ChessApp.styles.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/css/ChessApp.styles.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/css/site.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/css/site.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/favicon.ico",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/favicon.ico",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/black_bishop.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/black_bishop.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/black_bishop.png",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/img/black_bishop.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/black_king.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/black_king.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/black_king.png",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot/img/black_king.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/black_knight.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/black_knight.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/black_knight.png",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot/img/black_knight.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/black_pawn.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/black_pawn.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/black_pawn.png",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot/img/black_pawn.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/black_queen.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/black_queen.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/black_queen.png",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot/img/black_queen.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/black_rook.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/black_rook.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/black_rook.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot/img/black_rook.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/white_bishop.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/white_bishop.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/white_bishop.png",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot/img/white_bishop.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/white_king.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/white_king.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/white_king.png",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot/img/white_king.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/white_knight.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/white_knight.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/white_knight.png",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot/img/white_knight.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/white_pawn.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/white_pawn.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/white_pawn.png",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot/img/white_pawn.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/white_queen.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/white_queen.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/white_queen.png",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot/img/white_queen.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/img/white_rook.png",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/img/white_rook.png",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "img/white_rook.png",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot/img/white_rook.png"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/js/chess.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/js/chess.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "js/chess.js",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot/js/chess.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/js/site.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/js/site.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/bootstrap/LICENSE",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/bootstrap/LICENSE",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery/dist/jquery.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Identity": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/lib/jquery/LICENSE.txt",
+      "Identity": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "ChessApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/zachivanovs/repos/chess/ChessApp/wwwroot/",
+      "ContentRoot": "/mnt/c/Users/zachi/Dev/chess/ChessApp/wwwroot/",
       "BasePath": "_content/ChessApp",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

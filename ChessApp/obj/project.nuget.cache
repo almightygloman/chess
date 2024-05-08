@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d7I95opJRj1FpqS8xmG5JAsYSZfLUGVwvx3V4L6oHMTmFUY0OS1udNTAJzAR6m1B6i+VS2ih+xnwh9SUfGJFdQ==",
+  "dgSpecHash": "xwFSZ43NSYkTgY3teZkS9q8KmYYXCxbKcDo4aeluutJ3eIY0GcFcqp68ijrbK9IQf0ZZVZ3yVIT4rxLJY7fOxg==",
   "success": true,
-  "projectFilePath": "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj",
+  "projectFilePath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ChessApp.Tests/1.0.0": {
         "dependencies": {
+          "ChessApp": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.11.0",
           "NUnit": "3.13.2",
           "NUnit3TestAdapter": "4.0.0",
@@ -649,6 +650,11 @@
           "System.Threading": "4.0.11",
           "System.Xml.ReaderWriter": "4.0.11"
         }
+      },
+      "ChessApp/1.0.0": {
+        "runtime": {
+          "ChessApp.dll": {}
+        }
       }
     }
   },
@@ -979,6 +985,11 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "ChessApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 public class Pawn : Piece
 {
+    public bool EnPassantTarget = false;
     public Pawn(PieceColor color, (int Row, int Column) position)
         : base(PieceType.Pawn, color == PieceColor.White ? "white_pawn.png" : "black_pawn.png", color, position)
     {
@@ -57,65 +58,8 @@ public class Pawn : Piece
                 return false;
             }
         }
-
+        EnPassantTarget = false;
         return true;
-    }
-    public override List<(int Row, int Column)> CalculateLegalMoves(Game game, bool checkKingSafety = true)
-    {
-        var legalMoves = new List<(int Row, int Column)>();
-
-        // Check if the new position is within the bounds of the chessboard
-        if (Color == PieceColor.Black)
-        {
-            // Pawn can move forward one row (unless it's the first move, then it can move two rows)
-            if (Position.Row + 1 < 8)
-            {
-                legalMoves.Add((Position.Row + 1, Position.Column));
-
-                if (Position.Row == 6)
-                {
-                    legalMoves.Add((Position.Row + 2, Position.Column));
-                }
-            }
-        }
-        else if (Color == PieceColor.White)
-        {
-            // Pawn can move forward one row (unless it's the first move, then it can move two rows)
-            if (Position.Row - 1 >= 0)
-            {
-                legalMoves.Add((Position.Row - 1, Position.Column));
-
-                if (Position.Row == 1)
-                {
-                    legalMoves.Add((Position.Row - 2, Position.Column));
-                }
-            }
-        }
-
-        // Check for possible captures
-        int captureColumnLeft = Position.Column - 1;
-        int captureColumnRight = Position.Column + 1;
-        int captureRow = Color == PieceColor.Black ? Position.Row + 1 : Position.Row - 1;
-
-        if (captureColumnLeft >= 0)
-        {
-            Piece? leftCapture = game.Chessboard.GetPieceAtPosition(captureRow, captureColumnLeft);
-            if (leftCapture != null && leftCapture.Color != Color)
-            {
-                legalMoves.Add((captureRow, captureColumnLeft));
-            }
-        }
-
-        if (captureColumnRight < 8)
-        {
-            Piece? rightCapture = game.Chessboard.GetPieceAtPosition(captureRow, captureColumnRight);
-            if (rightCapture != null && rightCapture.Color != Color)
-            {
-                legalMoves.Add((captureRow, captureColumnRight));
-            }
-        }
-
-        return legalMoves;
     }
     public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
     {
@@ -136,6 +80,20 @@ public class Pawn : Piece
         }
 
         return true;
+    }
+
+
+    public bool isPromoted(){
+        if(this.Position.Row.Equals(7) && this.Color.Equals(PieceColor.White) || 
+          this.Position.Row.Equals(0) && this.Color.Equals(PieceColor.Black)){
+            
+            return true;
+        }
+        return false;
+    }
+
+    public void setPosition((int row, int col)position){
+        this.Position = position;
     }
 
 }

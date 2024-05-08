@@ -2,6 +2,8 @@ public class Chessboard
 {
     private Piece?[][] board;
 
+    public (int row, int col)? enPassantTarget;
+
     public Chessboard()
     {
         board = new Piece?[8][];
@@ -14,28 +16,28 @@ public class Chessboard
     public void AddInitialPieces()
     {
         // Add black pieces
-        AddPiece(new Rook(PieceColor.White, (0, 0)));
+          AddPiece(new Rook(PieceColor.White, (0, 0)));
         AddPiece(new Knight(PieceColor.White, (0, 1)));
         AddPiece(new Bishop(PieceColor.White, (0, 2)));
-        AddPiece(new Queen(PieceColor.White, (0, 3)));
-        AddPiece(new King(PieceColor.White, (0, 4)));
+          AddPiece(new King(PieceColor.White, (0, 3)));
+         AddPiece(new Queen(PieceColor.White, (0, 4)));
         AddPiece(new Bishop(PieceColor.White, (0, 5)));
         AddPiece(new Knight(PieceColor.White, (0, 6)));
-        AddPiece(new Rook(PieceColor.White, (0, 7)));
+          AddPiece(new Rook(PieceColor.White, (0, 7)));
 
         for (int i = 0; i < 8; i++)
         {
             AddPiece(new Pawn(PieceColor.White, (1, i)));
         }
         // Add white pieces
-        AddPiece(new Rook(PieceColor.Black, (7, 0)));
+          AddPiece(new Rook(PieceColor.Black, (7, 0)));
         AddPiece(new Knight(PieceColor.Black, (7, 1)));
         AddPiece(new Bishop(PieceColor.Black, (7, 2)));
-        AddPiece(new Queen(PieceColor.Black, (7, 3)));
-        AddPiece(new King(PieceColor.Black, (7, 4)));
+          AddPiece(new King(PieceColor.Black, (7, 3)));
+         AddPiece(new Queen(PieceColor.Black, (7, 4)));
         AddPiece(new Bishop(PieceColor.Black, (7, 5)));
         AddPiece(new Knight(PieceColor.Black, (7, 6)));
-        AddPiece(new Rook(PieceColor.Black, (7, 7)));
+          AddPiece(new Rook(PieceColor.Black, (7, 7)));
 
         for (int i = 0; i < 8; i++)
         {

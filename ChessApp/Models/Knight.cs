@@ -34,30 +34,4 @@ public class Knight : Piece
         if (!CanMoveTo(position, board)) return false;
         return true;
     }
-
-    public override List<(int Row, int Column)> CalculateLegalMoves(Game game, bool checkKingSafety = true)
-    {
-        // Create a list to hold the legal moves
-        List<(int Row, int Column)> legalMoves = new List<(int Row, int Column)>();
-
-        // Define the potential moves for a knight
-        int[] moveRows = new int[] { -2, -1, 1, 2, -2, -1, 1, 2 };
-        int[] moveCols = new int[] { -1, -2, -2, -1, 1, 2, 2, 1 };
-
-        // Check each potential move to see if it is a valid move
-        for (int i = 0; i < 8; i++)
-        {
-            int newRow = Position.Row + moveRows[i];
-            int newCol = Position.Column + moveCols[i];
-
-            // If the move is valid, add it to the list of legal moves
-            if (CanMoveTo((newRow, newCol), game.Chessboard.GetBoardState()))
-            {
-                legalMoves.Add((newRow, newCol));
-            }
-        }
-
-        // Return the list of legal moves
-        return legalMoves;
-    }
 }

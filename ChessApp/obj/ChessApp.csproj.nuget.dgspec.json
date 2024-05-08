@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj": {}
+    "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj": {}
   },
   "projects": {
-    "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj": {
+    "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj",
+        "projectUniqueName": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj",
         "projectName": "ChessApp",
-        "projectPath": "/home/zachivanovs/repos/chess/ChessApp/ChessApp.csproj",
-        "packagesPath": "/home/zachivanovs/.nuget/packages/",
-        "outputPath": "/home/zachivanovs/repos/chess/ChessApp/obj/",
+        "projectPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj",
+        "packagesPath": "/home/zach/.nuget/packages/",
+        "outputPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/zachivanovs/.nuget/NuGet/NuGet.Config"
+          "/home/zach/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.120/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
         }
       }
     }

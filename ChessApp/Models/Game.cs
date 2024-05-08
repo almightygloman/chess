@@ -12,23 +12,16 @@ public class Game
     public Chessboard Chessboard { get; set; }
     public GameState State { get; private set; } = GameState.Active;
     public bool isWhiteTurn { get; set; }
+
+    public (int row, int col)? enPassantTarget = null;
+
+    public int totalMoves;
     public Game()
     {
         Chessboard = new Chessboard();
         isWhiteTurn = true;
-        //Chessboard.AddInitialPieces();
-        Piece wking = new King(PieceColor.White, (0,6));
-            Piece bbishop = new Knight(PieceColor.Black, (0,5));
-            Piece bqueen = new Queen(PieceColor.Black, (0,0));
-            Piece wpawn1 = new Pawn(PieceColor.White, (1,5));
-            Piece wpawn2 = new Pawn(PieceColor.White, (1,6));
-            Piece wpawn3 = new Pawn(PieceColor.White, (1,7));
-            Chessboard.AddPiece(wking);
-            Chessboard.AddPiece(bbishop);
-            Chessboard.AddPiece(bqueen);
-            Chessboard.AddPiece(wpawn1);
-            Chessboard.AddPiece(wpawn2);
-            Chessboard.AddPiece(wpawn3);
+        Chessboard.AddInitialPieces();
+        totalMoves = 0;
     }
 
     public bool IsValidMove(Piece? sourcePiece, int targetRow, int targetColumn)
@@ -52,6 +45,11 @@ public class Game
         var boardState = Chessboard.GetBoardState();
         if (!sourcePiece.CanMoveTo((targetRow, targetColumn), boardState))
         {
+            if (sourcePiece.Type.Equals(PieceType.Pawn) && (targetRow, targetColumn) == enPassantTarget)
+            {
+                Console.WriteLine("en Croissant");
+                return true;
+            }
             Console.WriteLine($"The {sourcePiece.Type} cannot move to the target position.");
             return false;
         }
@@ -188,14 +186,52 @@ public class Game
             return false;
         }
 
+        //special pawn moves
+        if (sourcePiece.Type.Equals(PieceType.Pawn))
+        {
+            //promotion
+            Pawn p = (Pawn)sourcePiece;
+            Pawn temp = new Pawn(p.Color, (targetRow, targetColumn));
+            if (temp.isPromoted())
+            {
+                //eventually prompt a choice of what piece to promote to
+                sourcePiece = new Queen(sourcePiece.Color, (sourceRow, sourceColumn));
+                Console.WriteLine("Pawn promoted");
+            }
+            //en passant, setting target square
+            if (Math.Abs(sourceRow - targetRow) > 1)
+            {
+                if (sourcePiece.Color.Equals(PieceColor.White))
+                {
+                    enPassantTarget = (targetRow - 1, targetColumn);
+                }
+                else
+                {
+                    enPassantTarget = (targetRow + 1, targetColumn);
+                }
+                Console.WriteLine(enPassantTarget);
+            }
+            //en passant moving to target square
+            if ((targetRow, targetColumn) == enPassantTarget)
+            {
+                if(sourcePiece.Color.Equals(PieceColor.White)){
+                    Chessboard.SetPieceAtPosition(targetRow-1, targetColumn, null);
+                }  
+                Chessboard.SetPieceAtPosition(targetRow+1, targetColumn, null);
+            }
+        }
+
+
         // Move the piece on the chessboard
         Chessboard.MovePiece(sourcePiece, (targetRow, targetColumn));
 
         // Update the turn color
         SwitchTurn();
-
+        totalMoves++;
+        Console.WriteLine(totalMoves);
         return true;
     }
+
 
     public List<Piece> GetCheckingPieces(PieceColor kingColor, Piece?[][] board)
     {
