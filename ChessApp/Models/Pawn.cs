@@ -1,18 +1,19 @@
-using System.Collections.Generic;
 public class Pawn : Piece
 {
-    public bool EnPassantTarget = false;
     public Pawn(PieceColor color, (int Row, int Column) position)
         : base(PieceType.Pawn, color == PieceColor.White ? "white_pawn.png" : "black_pawn.png", color, position)
     {
     }
-    public override bool CanMoveTo((int Row, int Column) newPosition, Piece?[][] board)
+    public override bool CanMoveTo((int Row, int Column) newPosition, Chessboard chessboard)
     {
+        Piece?[][] board = chessboard.GetBoardState();
         // Check if the position is within the bounds of the chessboard
         if (newPosition.Row < 0 || newPosition.Row >= 8 || newPosition.Column < 0 || newPosition.Column >= 8)
         {
             return false;
         }
+
+        if (newPosition == Position) return false;
 
         // Calculate the difference between the current and new positions
         int rowDifference = newPosition.Row - Position.Row;
@@ -25,10 +26,9 @@ public class Pawn : Piece
         }
 
         // Pawns can move forward one or two squares on their first move
-        if (Math.Abs(rowDifference) > 2 || columnDifference > 1)
-        {
-            return false;
-        }
+        if (Math.Abs(rowDifference) > 2 || columnDifference > 1) return false;
+
+        if(columnDifference > 0) return false;
 
         // Pawns can move forward two squares only on their first move
         if (Math.Abs(rowDifference) == 2)
@@ -37,16 +37,16 @@ public class Pawn : Piece
             {
                 return false;
             }
-        }
 
-        // Pawns can move diagonally only if they are capturing a piece
-        if (columnDifference == 1)
-        {
-            Piece? pieceAtNewPosition = board[newPosition.Row][newPosition.Column];
-            if (pieceAtNewPosition == null || pieceAtNewPosition.Color == Color)
+            if (Color == PieceColor.Black)
             {
-                return false;
+                chessboard.EnPassantTarget = (5, newPosition.Column);
             }
+            else
+            {
+                chessboard.EnPassantTarget = (2, newPosition.Column);
+            }
+            return true;
         }
 
         // Pawns cannot capture pieces directly in front of them
@@ -57,12 +57,14 @@ public class Pawn : Piece
             {
                 return false;
             }
+
         }
-        EnPassantTarget = false;
         return true;
     }
-    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    public override bool CanAttack((int Row, int Column) position, Chessboard chessboard)
     {
+        if (position == Position) return false;
+
         // Calculate the difference between the current and new positions
         int rowDifference = position.Row - Position.Row;
         int columnDifference = Math.Abs(position.Column - Position.Column);
@@ -79,21 +81,22 @@ public class Pawn : Piece
             return false;
         }
 
-        return true;
-    }
+        if(columnDifference == 1 && Math.Abs(rowDifference) < 1) return false;
 
+        //enPassant
+        if (chessboard.GetFromPosition(position) == null && chessboard.EnPassantTarget == position)
+        {
+            if (Color == PieceColor.White)
+                chessboard.SetPieceAtPosition((4, position.Column), null);
+            else
+                chessboard.SetPieceAtPosition((3, position.Column), null);
 
-    public bool isPromoted(){
-        if(this.Position.Row.Equals(7) && this.Color.Equals(PieceColor.White) || 
-          this.Position.Row.Equals(0) && this.Color.Equals(PieceColor.Black)){
-            
+                Console.WriteLine("en crossiant");
+
             return true;
         }
-        return false;
-    }
 
-    public void setPosition((int row, int col)position){
-        this.Position = position;
+        return true;
     }
 
 }

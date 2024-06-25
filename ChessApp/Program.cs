@@ -6,6 +6,9 @@ builder.Services.AddControllersWithViews();
 // Add session services
 builder.Services.AddSession();
 
+// Add SignalR services\
+builder.Services.AddSignalR();
+
 // Add Chessboard as a singleton service
 builder.Services.AddSingleton<Chessboard>();
 
@@ -36,5 +39,8 @@ app.UseSession(); // This must be after UseRouting() and before UseEndpoints()
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    // Map SignalR hub(s)
+//app.MapHub<YourHub>("/yourhub");
 
 app.Run();

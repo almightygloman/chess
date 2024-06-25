@@ -18,7 +18,9 @@
           "ChessApp.Tests.dll": {}
         }
       },
+      "AngularJS.Core/1.8.2": {},
       "coverlet.collector/3.1.0": {},
+      "jQuery/3.7.1": {},
       "Microsoft.CodeCoverage/16.11.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -652,6 +654,10 @@
         }
       },
       "ChessApp/1.0.0": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2",
+          "jQuery": "3.7.1"
+        },
         "runtime": {
           "ChessApp.dll": {}
         }
@@ -664,12 +670,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AngularJS.Core/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XqWsLLPPF8KDFYbVPbtpbae1claPLcjyxZgYThdXQri3I2O8SDdMzNafnhIi9nGgg3X6zsu1W0Qj0u5p1wr5mA==",
+      "path": "angularjs.core/1.8.2",
+      "hashPath": "angularjs.core.1.8.2.nupkg.sha512"
+    },
     "coverlet.collector/3.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-YzYqSRrjoP5lULBhTDcTOjuM4IDPPi6PhFsl4w8EI4WdZhE6llt7E38Tg4CHyrS+QKwyu1+9OwkdDgluOdoBTw==",
       "path": "coverlet.collector/3.1.0",
       "hashPath": "coverlet.collector.3.1.0.nupkg.sha512"
+    },
+    "jQuery/3.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rF8hnQxmBMlIspf8VN72bALtmIpKx6hKRpUdTOkp/8JzfF8KgNqHut5lOy9kFGvFIStumCqJ+PBxpI9gxpRYfQ==",
+      "path": "jquery/3.7.1",
+      "hashPath": "jquery.3.7.1.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/16.11.0": {
       "type": "package",

@@ -26,4 +26,4 @@
     4. Run the application
         dotnet run
     
-    5. Access the application in your web browser at http://localhost:7002/Chess/Chessboard
+    5. Access the application in your web browser at http://localhost:7002/Chess/Chessboard or click "Chessboard" in the nav bar to play a local chess game

@@ -46,14 +46,15 @@ namespace ChessApp.Controllers
         {
             try
             {
+                Game.Move move = new((sourceRow, sourceColumn) , (targetRow, targetColumn));
                 // Delegate the move operation to the Game class
-                bool moveSuccess = game.MovePiece(sourceRow, sourceColumn, targetRow, targetColumn, game.Chessboard.GetBoardState());
+                bool moveSuccess = game.MovePiece(move);
 
                 if (moveSuccess)
                 {
                     // Get the updated chessboard state
                     Piece?[][] updatedBoardState = game.Chessboard.GetBoardState();
-                    string currentTurn = game.isWhiteTurn ? "white" : "black";
+                    string currentTurn = game.Chessboard.WhiteToMove ? "white" : "black";
                     return Json(new { success = true, boardState = updatedBoardState, currentTurn = currentTurn });
                 }
                 else

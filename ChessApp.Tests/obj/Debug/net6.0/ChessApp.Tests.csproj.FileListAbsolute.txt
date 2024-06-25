@@ -315,9 +315,9 @@ C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.Tests.Assembly
 C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.Tests.AssemblyInfo.cs
 C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.Tests.csproj.CoreCompileInputs.cache
 C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.Tests.sourcelink.json
-C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.Tests.csproj.CopyComplete
 C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.Tests.dll
 C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\refint\ChessApp.Tests.dll
 C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.Tests.pdb
 C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.Tests.genruntimeconfig.cache
 C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ref\ChessApp.Tests.dll
+C:\Users\zachi\Dev\chess\ChessApp.Tests\obj\Debug\net6.0\ChessApp.20A0B381.Up2Date

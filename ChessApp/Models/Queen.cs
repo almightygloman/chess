@@ -1,12 +1,15 @@
-using System.Collections.Generic;
 public class Queen : Piece
 {
     public Queen(PieceColor color, (int Row, int Column) position)
             : base(PieceType.Queen, color == PieceColor.White ? "white_queen.png" : "black_queen.png", color, position)
     { }
 
-    public override bool CanMoveTo((int Row, int Column) newPosition, Piece?[][] board)
+    public override bool CanMoveTo((int Row, int Column) newPosition, Chessboard chessboard)
     {
+        Piece?[][] board = chessboard.GetBoardState();
+
+        if(newPosition == Position) return false;
+
         var (newRow, newCol) = newPosition;
         var (currentRow, currentCol) = this.Position;
         bool isDiagonal;
@@ -54,9 +57,9 @@ public class Queen : Piece
         return true;
     }
 
-    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    public override bool CanAttack((int Row, int Column) position, Chessboard chessboard)
     {
-        if (!CanMoveTo(position, board)) return false;
+        if (!CanMoveTo(position, chessboard)) return false;
         return true;
     }
 

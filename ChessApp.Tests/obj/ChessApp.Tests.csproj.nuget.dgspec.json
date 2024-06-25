@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/ChessApp.Tests.csproj": {}
+    "C:\\Users\\zachi\\Dev\\chess\\ChessApp.Tests\\ChessApp.Tests.csproj": {}
   },
   "projects": {
-    "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/ChessApp.Tests.csproj": {
+    "C:\\Users\\zachi\\Dev\\chess\\ChessApp.Tests\\ChessApp.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/ChessApp.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\zachi\\Dev\\chess\\ChessApp.Tests\\ChessApp.Tests.csproj",
         "projectName": "ChessApp.Tests",
-        "projectPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/ChessApp.Tests.csproj",
-        "packagesPath": "/home/zach/.nuget/packages/",
-        "outputPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp.Tests/obj/",
+        "projectPath": "C:\\Users\\zachi\\Dev\\chess\\ChessApp.Tests\\ChessApp.Tests.csproj",
+        "packagesPath": "C:\\Users\\zachi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zachi\\Dev\\chess\\ChessApp.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/zach/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\zachi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj": {
-                "projectPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj"
+              "C:\\Users\\zachi\\Dev\\chess\\ChessApp\\ChessApp.csproj": {
+                "projectPath": "C:\\Users\\zachi\\Dev\\chess\\ChessApp\\ChessApp.csproj"
               }
             }
           }
@@ -36,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -65,7 +72,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -74,26 +82,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj": {
+    "C:\\Users\\zachi\\Dev\\chess\\ChessApp\\ChessApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj",
+        "projectUniqueName": "C:\\Users\\zachi\\Dev\\chess\\ChessApp\\ChessApp.csproj",
         "projectName": "ChessApp",
-        "projectPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj",
-        "packagesPath": "/home/zach/.nuget/packages/",
-        "outputPath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/obj/",
+        "projectPath": "C:\\Users\\zachi\\Dev\\chess\\ChessApp\\ChessApp.csproj",
+        "packagesPath": "C:\\Users\\zachi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zachi\\Dev\\chess\\ChessApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/zach/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\zachi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -106,18 +116,34 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AngularJS.Core": {
+              "target": "Package",
+              "version": "[1.8.2, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -129,7 +155,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

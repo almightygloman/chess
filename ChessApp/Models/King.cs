@@ -1,12 +1,12 @@
-using System.Collections.Generic;
 public class King : Piece
 {
     public King(PieceColor color, (int Row, int Column) position)
             : base(PieceType.King, color == PieceColor.White ? "white_king.png" : "black_king.png", color, position)
     { }
 
-    public override bool CanMoveTo((int Row, int Column) newPosition, Piece?[][] board)
+    public override bool CanMoveTo((int Row, int Column) newPosition, Chessboard chessboard)
     {
+        Piece?[][] board = chessboard.GetBoardState();
         if (newPosition.Row < 0 || newPosition.Row >= 8 || newPosition.Column < 0 || newPosition.Column >= 8)
         {
             return false;
@@ -16,6 +16,8 @@ public class King : Piece
         {
             return false;
         }
+
+        if(newPosition == Position) return false;
 
         Piece? pieceAtNewPosition = board[newPosition.Row][newPosition.Column];
         if (pieceAtNewPosition != null && pieceAtNewPosition.Color == this.Color)
@@ -49,7 +51,7 @@ public class King : Piece
                 }
 
                 // If the piece can move to the new position, return false
-                if (piece.CanAttack(newPosition, board))
+                if (piece.CanAttack(newPosition, chessboard))
                 {
                     return false;
                 }
@@ -58,31 +60,10 @@ public class King : Piece
         return true;
     }
 
-    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    public override bool CanAttack((int Row, int Column) position, Chessboard chessboard)
     {
         // Check if the King can move to the position
-        if (!CanMoveTo(position, board)) return false;
-
-        // Check if there is an enemy piece at the position
-        Piece? pieceAtPosition = board[position.Row][position.Column];
-        if (pieceAtPosition == null || pieceAtPosition.Color == this.Color) return false;
-
-        // Check if the enemy piece is protected
-        PieceColor enemyColor = this.Color == PieceColor.White ? PieceColor.Black : PieceColor.White;
-        for (int row = 0; row < 8; row++)
-        {
-            for (int col = 0; col < 8; col++)
-            {
-                Piece? piece = board[row][col];
-                if (piece != null && piece.Color == enemyColor)
-                {
-                    // Use CanMoveTo instead of CanAttack to avoid infinite recursion
-                    if (piece.CanMoveTo(position, board)) return false;
-                }
-            }
-        }
-
-        // The enemy piece is not protected, so the King can capture it
+        if (!CanMoveTo(position, chessboard)) return false;
         return true;
     }
 

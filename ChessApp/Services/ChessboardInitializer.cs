@@ -1,7 +1,3 @@
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Hosting;
-
 public class ChessboardInitializer : IHostedService
 {
     private readonly Chessboard _chessboard;

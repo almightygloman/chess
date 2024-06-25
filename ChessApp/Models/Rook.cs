@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 public class Rook : Piece
 {
     public Rook(PieceColor color, (int Row, int Column) position)
@@ -6,13 +5,16 @@ public class Rook : Piece
     { }
 
 
-    public override bool CanMoveTo((int Row, int Column) newPosition, Piece?[][] board)
+    public override bool CanMoveTo((int Row, int Column) newPosition, Chessboard chessboard)
     {
+        Piece?[][] board = chessboard.GetBoardState();
         // Check if the new position is within the bounds of the chessboard
         if (newPosition.Row < 0 || newPosition.Row > 7 || newPosition.Column < 0 || newPosition.Column > 7)
         {
             return false;
         }
+
+        if(newPosition == Position) return false;
 
 
         // Check if the move is either horizontal or vertical
@@ -66,9 +68,9 @@ public class Rook : Piece
         return true;
     }
 
-    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    public override bool CanAttack((int Row, int Column) position, Chessboard chessboard)
     {
-        if (!CanMoveTo(position, board)) return false;
+        if (!CanMoveTo(position, chessboard)) return false;
         return true;
     }
 }

@@ -1,12 +1,15 @@
-using System.Collections.Generic;
 public class Knight : Piece
 {
     public Knight(PieceColor color, (int Row, int Column) position)
             : base(PieceType.Knight, color == PieceColor.White ? "white_knight.png" : "black_knight.png", color, position)
     { }
 
-    public override bool CanMoveTo((int Row, int Column) newPosition, Piece?[][] board)
+    public override bool CanMoveTo((int Row, int Column) newPosition, Chessboard chessboard)
     {
+        Piece?[][] board = chessboard.GetBoardState();
+
+        if(newPosition == Position) return false;
+
         // Check if the position is within the bounds of the chessboard
         if (newPosition.Row < 0 || newPosition.Row >= 8 || newPosition.Column < 0 || newPosition.Column >= 8)
         {
@@ -29,9 +32,9 @@ public class Knight : Piece
 
         return false;
     }
-    public override bool CanAttack((int Row, int Column) position, Piece?[][] board)
+    public override bool CanAttack((int Row, int Column) position, Chessboard chessboard)
     {
-        if (!CanMoveTo(position, board)) return false;
+        if (!CanMoveTo(position, chessboard)) return false;
         return true;
     }
 }

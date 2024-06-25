@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xwFSZ43NSYkTgY3teZkS9q8KmYYXCxbKcDo4aeluutJ3eIY0GcFcqp68ijrbK9IQf0ZZVZ3yVIT4rxLJY7fOxg==",
+  "dgSpecHash": "SBsDx5ueNWDNnDi/BDME84xgLaMCFgBL/DqYNwQLFfrey9OPVIUI/LPw9bA609tHDSGANkV54o54ET2floDc8w==",
   "success": true,
-  "projectFilePath": "/mnt/c/Users/zachi/Dev/chess/ChessApp/ChessApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\zachi\\Dev\\chess\\ChessApp\\ChessApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zachi\\.nuget\\packages\\angularjs.core\\1.8.2\\angularjs.core.1.8.2.nupkg.sha512",
+    "C:\\Users\\zachi\\.nuget\\packages\\jquery\\3.7.1\\jquery.3.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
