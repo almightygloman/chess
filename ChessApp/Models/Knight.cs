@@ -26,6 +26,7 @@ public class Knight : Piece
             Piece? pieceAtNewPosition = board[newPosition.Row][newPosition.Column];
             if (pieceAtNewPosition == null || pieceAtNewPosition.Color != this.Color)
             {
+                chessboard.EnPassantTarget = null;
                 return true;
             }
         }

@@ -65,6 +65,7 @@ public class Rook : Piece
 
 
         // No pieces are in the way, the move is valid
+        chessboard.EnPassantTarget = null;
         return true;
     }
 

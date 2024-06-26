@@ -53,7 +53,7 @@ public class Queen : Piece
             return false;
         }
 
-
+        chessboard.EnPassantTarget = null;
         return true;
     }
 

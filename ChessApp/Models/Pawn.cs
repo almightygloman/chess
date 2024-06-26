@@ -28,7 +28,7 @@ public class Pawn : Piece
         // Pawns can move forward one or two squares on their first move
         if (Math.Abs(rowDifference) > 2 || columnDifference > 1) return false;
 
-        if(columnDifference > 0) return false;
+        if (columnDifference > 0) return false;
 
         // Pawns can move forward two squares only on their first move
         if (Math.Abs(rowDifference) == 2)
@@ -59,6 +59,7 @@ public class Pawn : Piece
             }
 
         }
+        chessboard.EnPassantTarget = null;
         return true;
     }
     public override bool CanAttack((int Row, int Column) position, Chessboard chessboard)
@@ -81,7 +82,7 @@ public class Pawn : Piece
             return false;
         }
 
-        if(columnDifference == 1 && Math.Abs(rowDifference) < 1) return false;
+        if (columnDifference == 1 && Math.Abs(rowDifference) < 1) return false;
 
         //enPassant
         if (chessboard.GetFromPosition(position) == null && chessboard.EnPassantTarget == position)
@@ -91,11 +92,14 @@ public class Pawn : Piece
             else
                 chessboard.SetPieceAtPosition((3, position.Column), null);
 
-                Console.WriteLine("en crossiant");
+            Console.WriteLine("en crossiant");
 
             return true;
         }
+        else
+            if (chessboard.GetFromPosition(position) == null) return false;
 
+        chessboard.EnPassantTarget = null;
         return true;
     }
 

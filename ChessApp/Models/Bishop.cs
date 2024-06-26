@@ -35,7 +35,7 @@ public class Bishop : Piece
                 return false;
             }
         }
-
+        chessboard.EnPassantTarget = null;
         return true;
     }
     public override bool CanAttack((int Row, int Column) position, Chessboard chessboard)

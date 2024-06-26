@@ -57,6 +57,7 @@ public class King : Piece
                 }
             }
         }
+        chessboard.EnPassantTarget = null;
         return true;
     }
 

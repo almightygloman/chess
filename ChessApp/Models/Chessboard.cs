@@ -101,8 +101,7 @@ public class Chessboard
     }
 
     public void UndoTempMove(Game.Move move){
-        EnPassantTarget = null;
-
+        
         Piece? piece = GetFromPosition(move.TargetPosition);
 
         SetPieceAtPosition(move.SourcePosition, piece);
